@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Calculate your zero balance by inputting your income, expenses, savings, and funds.">
+    <link rel="stylesheet" href="./default.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Zero Balance Calculator</title>
+</head>
+
+<body>
+    <main class="grid-container">
+        <h1>Zero Balance Calculator</h1>
+        <p id="description">The purpose of this is to zero out your income by inputting your monthly income, expenses,
+            funds, and savings so that all of your money is allocated and accounted.</p>
+        <article id="zeroBalanceForm" class="grid-container">
+            <section class="shadow-item container-bordered">
+                <form id="income" class="finance-form grid-container">
+                    <h1>Income</h1>
+                    <label for="incomeName">Name <input name="incomeName" id="incomeName" type="text"></label>
+                    <label for="incomeAmount">Amount <input name="incomeAmount" id="incomeAmount" type="text"></label>
+                    <button>Add</button>
+                </form>
+            </section>
+            <section class="shadow-item container-bordered">
+                <form id="expense" class="finance-form grid-container">
+                    <h1>Expenses</h1>
+                    <label for="expenseName">Name <input name="expenseName" id="expenseName" type="text"></label>
+                    <label for="expenseAmount">Amount <input name="expenseAmount" id="expenseAmount"
+                            type="text"></label>
+                    <button>Add</button>
+                </form>
+            </section>
+            <section class="shadow-item container-bordered">
+                <form id="fund" class="finance-form grid-container">
+                    <h1>Funds</h1>
+                    <label for="fundName">Name <input name="fundName" id="fundName" type="text"></label>
+                    <label for="fundAmount">Amount <input name="fundAmount" id="fundAmount" type="text"></label>
+                    <button>Add</button>
+                </form>
+            </section>
+            <section class="shadow-item container-bordered">
+                <form id="saving" class="finance-form grid-container">
+                    <h1>Savings</h1>
+                    <label for="savingName">Name <input name="savingName" id="savingName" type="text"></label>
+                    <label for="savingAmount">Amount <input name="savingAmount" id="savingAmount" type="text"></label>
+                    <button>Add</button>
+                </form>
+            </section>
+        </article>
+
+        <article id="zeroBalanceDisplay">
+            <section>
+                <h1>Income</h1>
+                <section id="incomeDisplay">
+                </section>
+                <p>Income Total: $<span id="incomeTotal">0</span></p>
+            </section>
+            <section>
+                <h1>Expenses</h1>
+                <section id="expenseDisplay">
+                </section>
+                <p>Expense Total: $<span id="expenseTotal">0</span></p>
+            </section>
+            <section>
+                <h1>Funds</h1>
+                <section id="fundDisplay">
+                </section>
+                <p>Fund Total: $<span id="fundTotal">0</span></p>
+            </section>
+            <section>
+                <h1>Savings</h1>
+                <section id="savingDisplay">
+                </section>
+                <p>Saving Total: $<span id="savingTotal">0</span></p>
+            </section>
+            <p><strong>Final Balance: <span id="finalBalance">$0</span></strong></p>
+        </article>
+    </main>
+
+    <script src="./zerobalance.js"></script>
+</body>
+
+</html>
